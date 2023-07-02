@@ -1,0 +1,55 @@
+.navbar a {
+    text-decoration: none;
+    color: rgb(51, 27, 7);
+}
+
+.navbar a:hover {
+    border-bottom: solid rgb(51, 27, 7);
+    transition: .1s;
+}
+
+
+.navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px 20px;
+    z-index: 100;
+    box-shadow: 0px 2px 5px 0px #ffffffb9;
+}
+
+.navbar img {
+    max-width: 150px;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar li {
+    display: inline-flex;
+    justify-content: end;
+    text-decoration: none;
+    align-items: center;
+    font-size: 1.8rem;
+    list-style-type: none;
+    margin: 0 0 0 20px;
+    color: rgb(51, 27, 7);
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/restaurant-banner.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+header img {
+}
