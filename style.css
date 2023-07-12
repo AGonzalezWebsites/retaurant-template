@@ -1,13 +1,26 @@
-.navbar a {
-    text-decoration: none;
-    color: rgb(51, 27, 7);
-}
+/*
+Google Fonts: Tangerine, Roboto, Poiret One, Forum, Italianno, Julee
+*/
 
-.navbar a:hover {
-    border-bottom: solid rgb(51, 27, 7);
-    transition: .1s;
+:root {
+    --banner-font: Roboto;
+    --banner-offText-font: Italianno;
+    --h1-font: Tangerine;
+    --h1-font-size: 4rem;
+    --navbar-height: 60px;
+    --viewMore-from-bottom: 10px;
+    --button-color: rgb(246, 173, 71);
+    --navbar-color: rgb(18, 18, 18);
+    --navbar-color-with-opacity: rgb(0, 0, 0, .8);
+    --main-background-color: rgb(255, 255, 255);
+    --main-background-color-with-opacity: rgba(255, 255, 255, 0.9);
+    --secondary-background-color: rgb(27, 27, 27);
+    --primary-font-color: rgb(34, 34, 34);
+    --secondary-font-color: rgb(234, 234, 234);
+    --dish-text-size: 1.6rem;
+    --section-top-padding: 10vw;
+    --section-bottom-padding: 10vw;
 }
-
 
 .navbar {
     display: flex;
@@ -16,18 +29,31 @@
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
-    background-color: white;
-    padding: 10px 20px;
+    background-color: var(--navbar-color);
+    text-underline-offset: auto;
+    padding: 5px 30px;
+    height: var(--navbar-height);
     z-index: 100;
-    box-shadow: 0px 2px 5px 0px #ffffffb9;
+    box-shadow: 0px 2px 2px 2px var(--navbar-color);
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--secondary-font-color);
+}
+
+.navbar a:hover {
+    border-bottom: 2px solid var(--secondary-font-color);
+    margin-bottom: -2px;
 }
 
 .navbar img {
-    max-width: 150px;
+    height: 100%;
 }
 
 .navbar ul {
     display: flex;
+    color: var(--secondary-font-color);
 }
 
 .navbar li {
@@ -35,21 +61,414 @@
     justify-content: end;
     text-decoration: none;
     align-items: center;
-    font-size: 1.8rem;
+    font-family: var(--system-ui);
+    font-weight: 300;
+    font-size: 2.0rem;
     list-style-type: none;
-    margin: 0 0 0 20px;
-    color: rgb(51, 27, 7);
+    margin: 0 0 0 30px;
+}
+
+.navbar button {
+    width: 150px;
+    height: auto;
+    margin: 0 0 0 30px;
+    background-color: var(--button-color);
+    font-family: var(--system-ui);
+    border-radius: 2.5px;
+    border: 1px inset silver;
+}
+
+.navbar button:hover {
+    cursor: pointer;
+    border: 1px inset white;
 }
 
 header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    z-index: -1;
+    height: calc(100vh - var(--navbar-height));
+    width: 100vw;
+    margin-top: var(--navbar-height);
+}
+
+.backgroundImage {
+    display: inline;
+    position: absolute;
+    top: 0px;
+    left: 0px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/restaurant-banner.jpg");
-    height: 100vh;
+    height: calc(100.5vh - var(--navbar-height));
+    width: 100vw;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-    z-index: 1;
+    transform: scalex(1.01); 
+    filter: blur(3px);
+    margin-top: var(--navbar-height);
+    z-index: -1;
 }
 
-header img {
+.heroText .heroImage {
+    align-self: center;
+    width: 150px;
+    height: auto;
+}
+
+.heroText {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: calc(var(--viewMore-from-bottom) + (var(--navbar-height) / 2));
+    font-family: var(--banner-font);
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: 5px;
+    color: var(--main-background-color)
+}
+
+
+.heroText h1 {
+    font-size: 5rem;
+    text-shadow: black 3px 3px 5px;
+}
+
+.heroText .offText {
+    font-family: var(--banner-offText-font);
+    color: bisque;
+}
+
+.heroText .heroBold {
+    font-size: 6rem;
+    letter-spacing: 8px;
+}
+
+
+.heroContainer .viewMore {
+    display: flex;
+    position:absolute;
+    bottom: var(--viewMore-from-bottom);
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 5px;
+    color: white;
+    text-align: center;
+    letter-spacing: 3px;
+    text-shadow: black 0 0 10px;
+    font-size: 1.0rem;
+    font-family: Julee;
+}
+
+.heroContainer .viewMore:hover {
+    cursor: pointer;
+}
+
+.material-symbols-rounded {
+    display: flex;
+    align-self: center;
+    color: white;
+    text-align: center;
+    font-size: 6rem;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 600,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+.menuContainer {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    background-image: linear-gradient(rgb(255 204 108 / .35), rgba(255, 255, 255)), url("img/food-wallpaper-no-background.png");   
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 7.5vw 15vw 0 15vw;
+    transition: 1s;
+}
+/*
+Google Fonts: Tangerine, Roboto, Poiret One, Forum, Italianno, Julee
+*/
+.menuContainer h1 {
+    text-align: center;
+    color: var(--primary-font-color);
+    font-family: var(--h1-font);
+    /* text-shadow: 1px 1px 3px white; */
+    border-radius: 2.5px;
+    margin-bottom: 2.0rem;
+    margin-left: 38px;
+    font-size: var(--h1-font-size);
+    letter-spacing: .5rem;
+}
+
+.menuContainer i {
+    font-size: 6rem;
+}
+
+.menuContainer .dishesContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: black;
+    border-radius: 2.5px;
+}
+
+.menuContainer .dishesContainer .dishContainer {
+    display: flex;
+    flex: 1 1 auto;
+    width: 100%;
+    height: auto;
+    margin: 0rem 2rem 2rem 2rem;
+    background-color: var(--main-background-color-with-opacity);
+    border-radius: 2.5px;
+}
+
+.dishesContainer div:first-child {
+    margin-top: 2.0rem !important;
+}
+
+.dishInformation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.dishInformation .dishTitle {
+    font-size: calc(var(--dish-text-size) + .8rem);
+    font-weight: 600;
+}
+.dishInformation p {
+    font-family: Poiret One;
+    font-size: var(--dish-text-size);
+    padding-bottom: .4rem;
+}
+
+.dishInformation p b{
+    font-size: calc(var(--dish-text-size) + .4rem);
+    font-weight: 500px;
+}
+
+.menuContainer .dishesContainer img {
+    background: rgba(255, 255, 255, 0.36);
+    align-self: center;
+    width: 150px;
+    height: 100%;
+    border-radius: 2.5px;
+}
+
+.menuContainer .dishesContainer .menu {
+    background-color: var(--button-color);
+    text-align: left;
+    color: var(--primary-font-color);
+    font-family: var(--system-ui);
+    font-size: 2.6rem;
+    padding: 10px;
+    margin-bottom: 2rem;
+    border-radius: 2.5px;
+}
+
+.menuContainer .dishesContainer .menu i {
+    font-size: 2.6rem;
+}
+
+.menuContainer .dishesContainer .menu:hover {
+    cursor: pointer;
+}
+
+
+.testimonialsSection {
+    height: calc(100.5vh - var(--navbar-height));
+    width: 100vw;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.35), rgba(129, 129, 129, 0.34));
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--section-bottom-padding) 5vw;
+}
+
+.testimonialsSection h1 {
+    text-align: center;
+    color: var(--primary-font-color);
+    font-family: var(--h1-font);
+    text-shadow: 1px 1px 3px white;
+    border-radius: 2.5px;
+    margin-bottom: 2.0rem;
+    font-size: var(--h1-font-size);
+    letter-spacing: .5rem;
+}
+
+.testimonialsContainer iframe {
+    min-width: 100px !important;
+    width: 350px !important;
+    height: calc(auto + 100px) !important;
+    min-height: calc(auto + 100px) !important;
+    margin: 2rem;
+    border: 1px solid black !important;
+}
+
+.testimonialsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.review-header {
+    width: 0px !important;
+    height: 0px !important;
+    font-size: 1px !important;
+}
+
+.contactContainer { /* CONTAINER FOR ENTIRE CONTACT SECTION */
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    font-size: 4rem;
+    padding: var(--section-top-padding) 15vw;
+    color: var(--secondary-font-color);
+    height: auto;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contactContainer .contactBackgroundImage {
+    display: inline;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-image: linear-gradient(rgba(197, 197, 197, 0.36), rgb(0, 0, 0)), url("img/contact-background.jpg");
+    width: 100vw;
+    height: 100.3%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: scalex(1.004); 
+    filter: blur(2px);
+    z-index: -1;
+}
+
+.contactContainer .locationTitle {
+    font-family: var(--h1-font);
+    margin-bottom: 2vw;
+    border-radius: 2.5px;
+}
+
+.contactContainer h1 {
+    text-align: center;
+    color: var(--secondary-font-color);
+    font-family: var(--system-ui);
+    font-size: var(--h1-font-size);
+    letter-spacing: .5rem;
+}
+
+
+.locationContainer { /* MAIN MAP CONTAINER */
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 300px;
+    max-width: 500px;
+    margin: 0 0 10rem 0;
+}
+
+.locationContainer .address {
+    text-align: left;
+    color: var(--secondary-font-color);
+    font-family: var(--system-ui);
+    font-size: 1.4rem;
+    letter-spacing: 0;
+    padding-bottom: 10px;
+}
+
+.locationContainer i {
+    font-size: 4rem;
+}
+
+.mapAndSocialBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mapAndSocialBox h1 {
+    font-size: 2.6rem;
+}
+
+.mapAndSocialBox i {
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+
+.mapContainer {
+    aspect-ratio: 1 / 1;
+    border-radius: 2.5px;
+    overflow: hidden;
+    flex: 1;
+}
+/* Always set the map height explicitly to define the size of the div element that contains the map. */
+#map {
+    height: 100%;
+}
+
+.socialIconsContainer { /* MAIN SOCIAL CONTAINER */
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    flex: 1 3 100px;
+}
+
+.socialIconsContainer h1 {
+    text-align: center;
+    color: var(--secondary-font-color);
+    font-family: var(--h1-font);
+    border-radius: 2.5px;
+    margin-bottom: 2.0rem;
+    font-size: var(--h1-font-size);
+    letter-spacing: .5rem;
+}
+
+.socialIconsContainer h1 i {
+    font-size: 2.6rem;
+}
+
+.socialIcon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1;
+    align-items: center;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+
+.socialIcon i {
+    text-align: center;
+    font-size: 75px;
+    padding: 1.75rem 2rem;
+    color: var(--secondary-font-color)
+}
+
+.socialIcon i:hover {
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background-color: black;
+    font-size: 3.0rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
 }

@@ -1,8 +1,14 @@
+:root {
+  --system-ui: system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
 *, *::before, *::after {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
   }
   
   /*
@@ -26,7 +32,7 @@
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    Font-size: 1.6 rem; /* Addition to font-size in html */
+    Font-size: 1.6rem; /* Addition to font-size in html */
   }
   
   /*

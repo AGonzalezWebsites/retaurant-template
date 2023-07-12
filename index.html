@@ -3,27 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tangerine&family=Roboto&family=Poiret+One&family=Forum&family=Italianno&family=Julee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,500,0,0" />
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://kit.fontawesome.com/1bb63f7dbd.js" crossorigin="anonymous"></script>
+    <script type="module" src="map.js"></script>
     <title>Document</title>
 </head>
 <body>
 
     <div class="navbar">
-        <div class="logo"><a href="" target=""><img src="img/OGlogo.svg" alt=""></a></div>
+        <div class="logo"><a href="" target=""><img src="img/pizza-logo.png" alt=""></a></div>
         <ul>
             <li><a href="" target="">Home</a></li>
             <li><a href="" target="">Menu</a></li>
-            <li><a href="" target="">About</a></li>
-            <li><a href="" target="">Contact Us</a></li>
+            <li><a href="" target="">Location</a></li>
+            <button>Call Us!</button>
         </ul>
     </div>
-
-    <header>
-        
-    </header>
     
+    <header class="heroContainer">
+        <span class="backgroundImage"></span>
+        <span class="heroText">
+            <span class="heroImage"><a href="" target=""><img src="img/pizza-logo.png" alt=""></a></span>
+            <h1 class="offText">Phrase that</h1>
+            <h1 class="heroBold">defines</h1>
+            <h1>your restaurant</h1>
+        </span>
+        <span class="viewMore">
+            <h1>View More</h1>
+            <span class="material-symbols-rounded">
+                keyboard_arrow_down
+        </span>
+        </button>
+    </header>
+
+    <section class="menuContainer">
+        <h1>Dish Spotlight</h1>
+        <div class="dishesContainer">
+
+            <div class="dishContainer">
+                <img src="img/dishes/dish-one.jpeg" alt="dish" class="dish">
+                <div class="dishInformation">
+                    <p class="dishTitle">Meat City</p>
+                    <p><b>Description:</b> This pizza is FULL of meat. The rest of this description is a generic placeholder. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p><b>Toppings:</b> Pepperoni, Sausage, Topping 3, Topping 4, Topping 5</p>
+                </div>
+            </div>
+
+            <div class="dishContainer">
+                <img src="img/dishes/dish-two.jpeg" alt="dish" class="dish">
+                <div class="dishInformation">
+                    <p class="dishTitle">Honolulu Hawaiian</p>
+                    <p><b>Description:</b> This pizza is FULL of meat. The rest of this description is a generic placeholder. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p><b>Toppings:</b> Pepperoni, Sausage, Topping 3, Topping 4, Topping 5</p>
+                </div>
+            </div>
+
+            <div class="dishContainer">
+                <img src="img/dishes/dish-three.jpeg" alt="dish" class="dish">
+                <div class="dishInformation">
+                    <p class="dishTitle">Philly Cheese Steak</p>
+                    <p><b>Description:</b> This pizza is FULL of meat. The rest of this description is a generic placeholder. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p><b>Toppings:</b> Pepperoni, Sausage, Topping 3, Topping 4, Topping 5</p>
+                </div>
+            </div>
+
+            <div class="dishContainer">
+                <img src="img/dishes/dish-five.jpeg" alt="dish" class="dish">
+                <div class="dishInformation">
+                    <p class="dishTitle">Spinach & Feta</p>
+                    <p><b>Description:</b> This pizza is FULL of meat. The rest of this description is a generic placeholder. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p><b>Toppings:</b> Pepperoni, Sausage, Topping 3, Topping 4, Topping 5</p>
+                </div>
+            </div>
+            
+            <p class="menu"><i class="fa-solid fa-file-pdf"></i></i> Click to download full menu!</p>
+
+        </div>
+            
+    </section>
+
+    <section class="testimonialsSection">
+        <h1>Testimonials</h1>
+        <div class="testimonialsContainer">
+            <span class="yelp-review" data-review-id="x6MXpfl9mXFmVTfTHmpfxQ" data-hostname="www.yelp.com">Read <a href="https://www.yelp.com/user_details?userid=FTpbrjpGTM-Ywr2kj0jv4w" rel="nofollow noopener">Travis J.</a>'s <a href="https://www.yelp.com/biz/dominos-pizza-maitland?hrid=x6MXpfl9mXFmVTfTHmpfxQ" rel="nofollow noopener">review</a> of <a href="https://www.yelp.com/biz/nV_pX3TKUlGn7KUXiZCEmw" rel="nofollow noopener">Domino's Pizza</a> on <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a><script src="https://www.yelp.com/embed/widgets.js" type="text/javascript" async></script></span>
+            <span class="yelp-review" data-review-id="ESp_hyA16R07icbDaakraw" data-hostname="www.yelp.com">Read <a href="https://www.yelp.com/user_details?userid=bgN8ZH-uieE9YuVKCPLfNw" rel="nofollow noopener">Elena S.</a>'s <a href="https://www.yelp.com/biz/dominos-pizza-maitland?hrid=ESp_hyA16R07icbDaakraw" rel="nofollow noopener">review</a> of <a href="https://www.yelp.com/biz/nV_pX3TKUlGn7KUXiZCEmw" rel="nofollow noopener">Domino's Pizza</a> on <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a><script src="https://www.yelp.com/embed/widgets.js" type="text/javascript" async></script></span>
+            <span class="yelp-review" data-review-id="nowHzvLTFGktTryhxjGCQA" data-hostname="www.yelp.com">Read <a href="https://www.yelp.com/user_details?userid=SH7nI5fi_-WJOMQlB5QsdA" rel="nofollow noopener">Hanner N.</a>'s <a href="https://www.yelp.com/biz/dominos-pizza-maitland?hrid=nowHzvLTFGktTryhxjGCQA" rel="nofollow noopener">review</a> of <a href="https://www.yelp.com/biz/nV_pX3TKUlGn7KUXiZCEmw" rel="nofollow noopener">Domino's Pizza</a> on <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a><script src="https://www.yelp.com/embed/widgets.js" type="text/javascript" async></script></span>
+    </section>
+    
+    <section class="contactContainer">
+        <span class="contactBackgroundImage"></span>
+        <h1 class="locationTitle">Our Location</h1>
+        
+        <div class="mapAndSocialBox">
+            
+            <div class="locationContainer">
+                <h1 class="address"><i class="fa-solid fa-location-dot"></i> 2745 Location Park Way Orlando, Fl 34756</h1>
+                <div class="mapContainer">
+                    <div id="map"></div>
+                </div>
+            </div>
+                
+            <div class="socialIconsContainer">
+                <h1><i class="fa-solid fa-mobile-screen-button"></i> Social Media</h1>
+                <div class="socialIcon">
+                    <div>
+                        <i class="fa-brands fa-square-facebook"></i>
+                        <i class="fa-brands fa-square-instagram"></i>
+                        
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-square-youtube"></i>
+                        <i class="fa-brands fa-square-twitter"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Restaurant Template - AGonzalezWebsites - 2023</p>
+    </footer>
+
+
 
     <script src="app.js"></script>
+    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyCHQhi-EBFup8hdSLqdiOjLqtt2kwH99cE", v: "beta"});</script>
 </body>
 </html>
